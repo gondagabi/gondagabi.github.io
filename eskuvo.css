@@ -1,0 +1,308 @@
+/*GENERAL RULES*/
+* {
+  box-sizing: border-box;
+  }
+html {
+  font-size: 16px;
+}
+body {
+  color : #444349;
+}
+/*GENERAL ELEMENTS STYLES*/
+img {
+  width: calc(15vw + .1vw);
+  padding: 3%;
+   }
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: calc(2.6rem + 1vw);
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: calc(0.125rem + .1vw);
+  }
+
+h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: calc(1rem + 1vw);
+   }
+h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: calc(.8rem + 1vw);
+  }
+h4 {
+  font-family: 'Mulish', sans-serif;
+  font-size: calc(.9rem + 1vw);
+  }
+ h1, h2, h3, h4, ul {
+ line-height: calc(1rem + 1vw);
+ padding: calc(1% + 1vw);
+ }
+ li {
+  font-family: 'Mulish', sans-serif;
+ font-size: calc(.6rem + 1vw); 
+  line-height: calc(.8rem + 1vw);
+  padding: calc(.5% + .1vw);
+}
+p {
+  font-family: 'Mulish', sans-serif;
+ font-size: calc(.4rem + 1vw); 
+  line-height: calc(.9rem + 1vw);
+  padding: calc(.5% + .1vw);
+}
+@media only screen and (max-width: 900px) {
+  p {font-size: calc(.9rem + 1vw);}
+}
+ span {
+  color: #bd806e;
+}
+
+
+/*BACKGROUND CONTAINER FAIR AREA*/ /*.location, .gifts, .contact */
+ .fair-container {
+  background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png') no-repeat center;
+  background-size: cover;
+  padding: 4%;
+  }
+/*BACKGROUND CONTAINER DARK AREA*/ /*.program, .qa */
+ .dark-container {
+  background-color: hsla(100,0%,0%,.6);
+  color: #d2ba87;
+   padding: 4%;
+}
+
+  /*HEADER*/
+.cover-flex {
+  background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg')  no-repeat center;
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center; /* Center the image */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+   justify-content: center; /*put container vertical middle of cover*/
+   align-items: center;  /*put container horizontally middle of cover*/
+  }
+@media only screen and (max-width: 900px) {
+  .cover-flex {
+    width: 100%;
+    height: 60vh;
+  }
+}
+.cover-flex > .text-wrapper {
+  background-color: hsla(100,0%,0%,.6); /*color of tagline and date*/
+  color: hsla(0,0%,100%,.9);
+  text-align: center; /*horizontally center*/
+  width: 100%; /*XS devices: phones, 500px and down*/
+  height: calc(16vh + 1vh);
+  padding-top: auto auto;
+ justify-content: center; /*put container vertical middle of cover*/
+   align-items: center;  /*put container horizontally middle of container*/
+ 
+ }
+@media only screen and (max-width: 900px) {
+  .cover-flex > .text-wrapper  {width: 100%;}
+  }
+@media only screen and (min-width: 900px) {
+  .cover-flex > .text-wrapper  {
+    width: calc(35vw + 1vw);
+    height: calc(22vh + 1vh);
+  }
+  }
+
+.name {
+  color: #d2ba87; /*gold*/
+  font-family: 'Great Vibes', cursive;
+  font-size: calc(4rem + 1vw); 
+  padding: .75rem; 
+  letter-spacing: calc(0.125rem + .1vw);
+}
+
+.date, .message {
+  font-family: 'Mulish', sans-serif;
+  font-size: calc(1rem + 1vw);  
+  letter-spacing: calc(0.1rem + .1vw);
+  padding: .55rem;
+ 
+}
+@media only screen and (min-width: 900px) {
+  .message {text-transform: uppercase;}  /*text-transform: uppercase; on L screen*/
+}
+
+.hero-hr {
+  width: 20vw; /*XS devices: phones, 500px and down*/
+  border-bottom: 1px solid;
+  border-bottom-color: hsla(0,0%,100%,.7);/*color of tagline and date*/
+   }
+
+div.date:before, div.date:after {
+  content: "";
+  display: inline-block;
+  width: 2vw; 
+  margin: 0 .5rem 0 .5rem;
+  vertical-align: middle;
+  border-bottom: 1px solid;
+  border-bottom-color: hsla(0,0%,100%,.7);/*color of tagline and date*/
+}
+
+/*MAIN - LOCATION AREA*/
+.location {
+  text-align: center; 
+  }
+/*THE 3 COLUMN LAYOUT*/
+.column-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex: 33.3%;
+  text-align: center;
+  justify-content: space-around;
+  flex-grow: 1;
+  }
+.column-wrapper > .loc-column {
+  display: flex;
+  float: left;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  flex-grow: 1;
+}
+.loc-column img {
+  padding: 2%;
+  justify-content: space-around;
+  width: calc(12vw + .1vw);
+  padding-top: 2%;
+  Padding-bottom: 2%;
+  }
+
+/* Responsive layout - makes a one column-layout instead of three columns */
+@media screen and (max-width: 900px) {
+    .column-wrapper {
+       flex: 100%;
+       flex-direction: column;
+       text-align: center;
+  }
+    .loc-column img {
+         justify-content: space-around;
+         align-items: center;
+ }
+}
+/*END mobile layout STYLES*/
+.location hr {
+  width: calc(18vw + 1vw); 
+  border-bottom: 1px solid;
+ }
+@media only screen and (min-width: 900px) {
+  .location hr {display: none;}
+}
+.loc-column h2 {
+  font-weight: bold;
+ /* padding-bottom: 1.8rem;*/
+}
+.location h2, .location p {
+  vertical-align: middle;
+  padding: 2%;
+}
+
+  
+
+/*MAIN - PROGRAM- DARK AREA*/
+/* POSITION - move to right the container to the desired positon - while the aligning left */
+@media screen and (min-width: 900px) {
+  .prg-wrapper {
+    justify-content:center;
+    position: relative;
+    left: 30%;
+   }
+  }
+  
+.program h4 {
+  font-style: italic;
+  text-align: left;
+   }
+.program ul {
+   font-family: 'Mulish', sans-serif;
+  justify-content:center;
+  }
+
+/*MAIN - GIFTS - FAIR AREA*/
+.gifts {
+  text-align: center;
+  
+ }
+/*MAIN - QUESTION-ANSWER - DARK AREA*/
+.qa-column h3 {
+  text-align: left;
+  font-weight: bold;
+}
+.qa-column p, .qa h1, .qa h3 {
+  text-align: left;
+  color: #d2ba87;/*gold*/
+ }
+
+/*THE 3 COLUMN LAYOUT*/
+.qa {
+  display: flex;
+  flex-direction: row;
+}
+.qa-column {
+  display: flex;
+  flex-direction: column;
+  width: 33.3%;
+  
+  }
+.qa-column > div {
+  flex: 1;
+  border: 1px solid; /*helper border*/
+  display: flex;
+  flex-direction: column;
+  }
+
+@media screen and (max-width: 900px) {
+  .qa, .qa-column, .qa-column div {
+    flex: 100%;
+   flex-direction: column;
+    width: 100%;    
+  }
+}
+.smallsection {
+   padding: calc(.3% + 1vh);
+ }
+.qa hr {
+  border: 1px solid #d2ba87;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: calc(32vw + 1vw); 
+ }
+@media screen and (min-width: 900px) {
+  .qa hr {
+    display: hidden;
+    border: none;
+   }
+  }
+
+/*MAIN - CONTACT - FAIR AREA*/
+.contact h3 {
+  text-align: center;
+  line-height: calc(2rem + 1vh);
+}
+
+/*FOOTER*/
+footer {
+  font-size: .6rem;
+  color: white;
+  background-color: #606060;
+  text-align: center;
+  padding: 5%;
+}
+a {
+  color: #bd806e;
+}
+a:hover {
+ color: #eda087;
+}
+span footer {
+  color: white;
+}
+span.sp {
+  color: white;
+}
+
