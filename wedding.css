@@ -15,10 +15,11 @@ img {
    }
 h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: calc(2.6rem + 1vw);
+  font-size: calc(2.2rem + 1vw);
   font-weight: bold;
   text-align: center;
   letter-spacing: calc(0.125rem + .1vw);
+  padding: calc(.5% + .1vw);
   }
 
 h2 {
